@@ -2,8 +2,7 @@
 
 1. Select
    `Use This Template -> Create a new repository` ![starting from a template](resources/readme_resources/starting_from_a_template.png)
-2. Name your repository and make sure to set the visibility to **Private
-   ** ![set project visibility to private](resources/readme_resources/change_project_visibility.png)
+2. Name your repository and make sure to set the visibility to **Private** ![set project visibility to private](resources/readme_resources/change_project_visibility.png)
     - Leave `Include All Branches` as `Off`
 3. Click `Create Repository`
 4. Copy the url of GitHub repo you just created ![getting the repository url](resources/readme_resources/get_repository_url.png)

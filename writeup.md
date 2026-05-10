@@ -12,9 +12,9 @@
 
 ### Bug 1
 
-### test_swap.cpp
+### swap.cpp
 
-Line number(s) of the bugs.
+29
 
 ```c++
 Copy of the buggy code
@@ -22,7 +22,7 @@ Copy of the buggy code
 
 ### How the bug was located
 
-Explain how you found the bug
+The bug was found
 
 ### Description
 

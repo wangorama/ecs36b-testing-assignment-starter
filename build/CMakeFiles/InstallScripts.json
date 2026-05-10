@@ -1,0 +1,16 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/kingdoofus/CLionProjects/ecs36b-testing-assignment-starter/build/cmake_install.cmake",
+		"/home/kingdoofus/CLionProjects/ecs36b-testing-assignment-starter/build/src/cmake_install.cmake",
+		"/home/kingdoofus/CLionProjects/ecs36b-testing-assignment-starter/build/testing/cmake_install.cmake",
+		"/home/kingdoofus/CLionProjects/ecs36b-testing-assignment-starter/build/_deps/googletest-build/cmake_install.cmake",
+		"/home/kingdoofus/CLionProjects/ecs36b-testing-assignment-starter/build/_deps/googletest-build/googlemock/cmake_install.cmake",
+		"/home/kingdoofus/CLionProjects/ecs36b-testing-assignment-starter/build/_deps/googletest-build/googletest/cmake_install.cmake",
+		"/home/kingdoofus/CLionProjects/ecs36b-testing-assignment-starter/build/_deps/rapidcheck-build/cmake_install.cmake",
+		"/home/kingdoofus/CLionProjects/ecs36b-testing-assignment-starter/build/_deps/rapidcheck-build/ext/cmake_install.cmake",
+		"/home/kingdoofus/CLionProjects/ecs36b-testing-assignment-starter/build/_deps/rapidcheck-build/extras/cmake_install.cmake",
+		"/home/kingdoofus/CLionProjects/ecs36b-testing-assignment-starter/build/_deps/rapidcheck-build/extras/gtest/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

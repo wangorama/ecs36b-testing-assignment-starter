@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/kingdoofus/CLionProjects/ecs36b-testing-assignment-starter/build/_deps/rapidcheck-subbuild/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

@@ -1,16 +1,18 @@
 # Google Test And Debugging Writeup
 
 ## Things I Thought To Test
-1. Thing 1
-2. Thing 2
-3. Thing 3
-...
+1. `swap`
+2. `copy_array`
+3. `min_index_of_array`
+4. `make_sorted`
+5. `get_sorted`
+6. `parse_args`
 
 ## Bugs
 
 ### Bug 1
 
-### Location
+### test_swap.cpp
 
 Line number(s) of the bugs.
 

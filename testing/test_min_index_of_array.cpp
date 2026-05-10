@@ -9,6 +9,17 @@ TEST(MinIndexOfArrayTests, SimpleMinIndexAtFrontOfArray) {
     /*
      * See if we can find the index of the minimum value when it is at the front of the array
      */
+    int arr[] = {1, 2, 3, 4, 5};
+    int n = 5;
+
+    int* result = min_index_of_array(arr, n);
+
+    for (int i = 0; i < n; i++) {
+        EXPECT_EQ(result[i], arr[i]);
+    }
+
+    free(result);
+
 }
 
 TEST(MinIndexOfArrayTests, SimpleMinIndexAtEndOfArray) {
@@ -44,6 +55,13 @@ RC_GTEST_PROP(MinIndexOfArrayTests,
     /* Check that the value at the location of the minimum index
      * is not larger than any of the other values in the array
      */
+    int n = values.size();
+    int* ar = values.data();
+    int* result = get_sorted(ar, n);
+    for (int i = 0; i < n - 1; i++) {
+        RC_ASSERT(result[i] <= result[i + 1]);
+    }
+    free(result);
 }
 
 RC_GTEST_PROP(MinIndexOfArrayTests,
@@ -52,4 +70,11 @@ RC_GTEST_PROP(MinIndexOfArrayTests,
     /*
      * Check that finding the minimum of the array did not change the contents of the array.
      */
+    int n = values.size();
+    int* ar = values.data();
+    int* result = get_sorted(ar, n);
+    for (int i = 0; i < n - 1; i++) {
+        RC_ASSERT(result[i] <= result[i + 1]);
+    }
+    free(result);
 }

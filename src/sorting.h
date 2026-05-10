@@ -5,7 +5,8 @@
 #ifndef TESTINGANDDEBUGGING_SORTING_H
 #define TESTINGANDDEBUGGING_SORTING_H
 int* get_sorted(int* ar, int len);
-void make_sorted(int* ar, int len);
+
+int *make_sorted(int *ar, int len);
 int* copy_array(int * ar, int len);
 int min_index_of_array(int* ar, int len);
 void swap(int* a, int* b);

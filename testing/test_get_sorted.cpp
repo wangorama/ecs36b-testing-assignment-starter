@@ -26,9 +26,9 @@ TEST(GetSortedTests, SimpleSortReverseSortedArray) {
     int simple_array[] = {2, 3, 6 , 7};
     int reverse_simple_array[] = {7, 6, 3 , 2};
     int n = 4;
-    int* result = get_sorted(simple_array, n);
+    int* result = get_sorted(reverse_simple_array, n);
     for (int i = 0; i < n; i++) {
-        EXPECT_EQ(reverse_simple_array[i], result[i]);
+        EXPECT_EQ(simple_array[i], result[i]);
     }
     free(result);
 
@@ -78,12 +78,12 @@ TEST(GetSortedTests, SimpleOriginalDoesNotChange) {
      */
     int original[] = {2, 3, 6 , 7};
     int snap[] = {2, 3, 6 , 7};
-
     int n = 4;
+    int* result = get_sorted(original, n);
     for (int i = 0; i < n; i++) {
         EXPECT_EQ(original[i], snap[i]);
     }
-
+    free(result);
 }
 
 TEST(GetSortedTests, SimpleCopyWasMade) {
@@ -128,13 +128,14 @@ RC_GTEST_PROP(GetSortedTests,
      * Don't forget to free any memory that was dynamically allocated as part of your test.
      */
     int n = values.size();
-    int* ar = values.data();
-    int* result = get_sorted(ar, n);
+    const std::vector<int> original_array;
+    std::vector<int> copy_original;
+    int* result = get_sorted(copy_original.data(), n);
     for (int i = 0; i < n - 1; i++) {
-        RC_ASSERT(result[i] <= result[i + 1]);
+        RC_ASSERT(original_array[i] == copy_original[i]);
     }
     free(result);
-    ;
+
 }
 
 RC_GTEST_PROP(GetSortedTests,
@@ -147,10 +148,9 @@ RC_GTEST_PROP(GetSortedTests,
      * Don't forget to free any memory that was dynamically allocated as part of your test.
      */
     int n = values.size();
-    int* result = get_sorted(ar, n);
-    for (int i = 0; i < n - 1; i++) {
-        RC_ASSERT(result[i] <= result[i + 1]);
-    }
+    std::vector<int> ar (values);
+    int* result = get_sorted(ar.data(), n);
+    RC_ASSERT(result != ar.data());
     free(result);
 
 }

@@ -32,6 +32,16 @@ TEST(ParseArgsTests, SimpleCheckArgumentsParsedSuccessfully) {
      * (ar_out and len_out are set to the right values).
      * Don't forget to free any memory that was dynamically allocated as part of your test.'
      */
+    int argc = 4;
+    char* argv[] = {"this", "is", "inserted", "argument"};
+
+    char** ar_out;
+    int len_out;
+
+    parse_args(argc, argv, &ar_out, &len_out);
+
+    EXPECT_EQ(len_out, argc);
+    EXPECT_EQ(ar_out[0], argv[0]);
 
 }
 
@@ -40,16 +50,7 @@ TEST(ParseArgsTests, SimpleCheckParseNoArgs) {
      * Check that you parse you can successfully parse "no" command line arguments.
      */
 
-    int arr[] = {1, 2, 3, 4, 5};
-    int n = 5;
 
-    int* result = parse_args(arr, n);
-
-    for (int i = 0; i < n; i++) {
-        EXPECT_EQ(result[i], arr[i]);
-    }
-
-    free(result);
 }
 
 
@@ -61,13 +62,7 @@ RC_GTEST_PROP(ParseArgsTests,
      * arguments when we receive 1 or more arguments.
      * Don't forget to free any memory that was dynamically allocated as part of this test
      */
-    int n = values.size();
-    int* ar = values.data();
-    int* result = get_sorted(ar, n);
-    for (int i = 0; i < n - 1; i++) {
-        RC_ASSERT(result[i] <= result[i + 1]);
-    }
-    free(result);
+
 }
 
 RC_GTEST_PROP(ParseArgsTests,
@@ -77,11 +72,5 @@ RC_GTEST_PROP(ParseArgsTests,
     /*
      * Check that you parse you can successfully parse "no" command line arguments.
      */
-    int n = values.size();
-    int* ar = values.data();
-    int* result = get_sorted(ar, n);
-    for (int i = 0; i < n - 1; i++) {
-        RC_ASSERT(result[i] <= result[i + 1]);
-    }
-    free(result);
+
 }

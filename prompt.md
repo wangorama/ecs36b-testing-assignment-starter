@@ -207,7 +207,7 @@ Command line arguments can be set by
 3. Selecting `Edit...`
 4. Entering your command line arguments in `Program Arguments`
 
-![Setting Command Line Arguments](prompt_resources/EnteringCommandLineArguments.gif)
+![Setting Command Line Arguments](resources/prompt_resources/EnteringCommandLineArguments.gif)
 
 ### Switching Between Run Configurations
 1. Click on the Drop-Down Arrow next to the current configuration
@@ -215,7 +215,7 @@ Command line arguments can be set by
 3. Select the configuration you want
    - For this homework, you will be interested in the `SortInts` and `SortingTesting` configurations 
 
-![Switching Between Run Configurations](prompt_resources/SwitchingConfigurations.gif)
+![Switching Between Run Configurations](resources/prompt_resources/SwitchingConfigurations.gif)
 
 
 ## Compiling on the Terminal (Optional)

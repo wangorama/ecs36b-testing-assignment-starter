@@ -14,7 +14,7 @@ int* get_sorted(int* ar, int len) {
   return sorted_ar;
 }
 
-void make_sorted(int* ar, int len) {
+int *make_sorted(int* ar, int len) {
   /**
  * Sort the given array in place.
  * @param ar: The array to be sorted.
@@ -24,6 +24,7 @@ void make_sorted(int* ar, int len) {
     int min_index = min_index_of_array(ar + i, len);
     swap(ar + i, ar + min_index);
   }
+  return ar;
 }
 
 int* copy_array(int* ar, int len) {

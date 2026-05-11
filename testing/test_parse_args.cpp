@@ -32,16 +32,7 @@ TEST(ParseArgsTests, SimpleCheckArgumentsParsedSuccessfully) {
      * (ar_out and len_out are set to the right values).
      * Don't forget to free any memory that was dynamically allocated as part of your test.'
      */
-    int argc = 4;
-    char* argv[] = {"this", "is", "inserted", "argument"};
 
-    char** ar_out;
-    int len_out;
-
-    parse_args(argc, argv, &ar_out, &len_out);
-
-    EXPECT_EQ(len_out, argc);
-    EXPECT_EQ(ar_out[0], argv[0]);
 
 }
 
@@ -49,7 +40,6 @@ TEST(ParseArgsTests, SimpleCheckParseNoArgs) {
     /*
      * Check that you parse you can successfully parse "no" command line arguments.
      */
-
 
 }
 

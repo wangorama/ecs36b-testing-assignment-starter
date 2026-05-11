@@ -14,76 +14,73 @@
 
 ### swap.cpp
 
-29
+Line 17
 
 ```c++
-Copy of the buggy code
+void make_sorted(int* ar, int len) {
+  /**
+ * Sort the given array in place.
+ * @param ar: The array to be sorted.
+ * @param len: The length of the array to be sorted.
+ */
+  for (int i = 0; i < len; ++i) {
+    int min_index = min_index_of_array(ar + i, len);
+    swap(ar + i, ar + min_index);
+  }
+}
 ```
 
 ### How the bug was located
 
-The bug was found
+The bug was found through testing make_sorted. 
 
 ### Description
 
-Describe the bug
+A mismatch of the header file versus what the main file actually declared.
+
 
 ### Fix 
 
-Explain how you fixed the bug
+I changed the type from void to int.
 
 ```c++
-Copy of the fixed code
+int *make_sorted(int* ar, int len) {
+  /**
+ * Sort the given array in place.
+ * @param ar: The array to be sorted.
+ * @param len: The length of the array to be sorted.
+ */
+  for (int i = 0; i < len; ++i) {
+    int min_index = min_index_of_array(ar + i, len);
+    swap(ar + i, ar + min_index);
+  }
+  return ar;
+}
+
 ```
 
 ### Bug 2
 
-### Location
+### main.cpp
 
-Line number(s) of the bugs.
+Line 16
 
 ```c++
-Copy of the buggy code
+    parse_args(argc, argv, given_numbers, &len);
 ```
 
 ### How the bug was located
 
-Explain how you found the bug
-
+testing parse args through a simple test was enough to catch the bug.
 ### Description
 
-Describe the bug
+given_numbers was not initialized.
 
 ### Fix
 
-Explain how you fixed the bug
+Initialized it
 
 ```c++
-Copy of the fixed code
+ int* given_numbers = nullptr;
 ```
 
-### Bug 3
-
-### Location
-
-Line number(s) of the bugs.
-
-```c++
-Copy of the buggy code
-```
-
-### How the bug was located
-
-Explain how you found the bug
-
-### Description
-
-Describe the bug
-
-### Fix
-
-Explain how you fixed the bug
-
-```c++
-Copy of the fixed code
-```
